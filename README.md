@@ -1,18 +1,22 @@
 text-hatena.js
 ==============
 
-CPAN ¤Ç¸ø³«¤µ¤ì¤Æ¤¤¤ë [Text::Hatena](http://search.cpan.org/dist/Text-Hatena/) ¤ò JavaScript ¤Ë°Ü¿¢¤·¤¿¥é¥¤¥Ö¥é¥ê¤Ç¤¹¡£
+CPAN ã§å…¬é–‹ã•ã‚Œã¦ã„ã‚‹ [Text::Hatena](http://search.cpan.org/dist/Text-Hatena/) ã‚’ JavaScript ã«ç§»æ¤ã—ãŸãƒ©ã‚¤ãƒ–ãƒ©ãƒªã§ã™ã€‚
 
-´°Á´¤Ë JavaScript ¤À¤±¤Ç½ñ¤«¤ì¤Æ¤¤¤ë¤Î¤Ç¡¢¥Ö¥é¥¦¥¶¤À¤±¤Ç¡Ö¤Ï¤Æ¤Êµ­Ë¡¡×¤ò¥ê¥¢¥ë¥¿¥¤¥à¤Ë HTML ¤ËÊÑ´¹¤Ç¤­¤Ş¤¹¡£
+å®Œå…¨ã« JavaScript ã ã‘ã§æ›¸ã‹ã‚Œã¦ã„ã‚‹ã®ã§ã€ãƒ–ãƒ©ã‚¦ã‚¶ã ã‘ã§ã€Œã¯ã¦ãªè¨˜æ³•ã€ã‚’ãƒªã‚¢ãƒ«ã‚¿ã‚¤ãƒ ã« HTML ã«å¤‰æ›ã§ãã¾ã™ã€‚
 
+MozJS branch ã«ã¤ã„ã¦
+---------------------
 
-¥Ç¥â
+Mozilla JavaScript module ç”¨ã« `EXPORTED_SYMBOLS` ã‚’åŠ ãˆãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³ã§ã™ã€‚
+
+ãƒ‡ãƒ¢
 ----
 
-* [¤Ï¤Æ¤Êµ­Ë¡¥ï¡¼¥×¥í](http://tech.nitoyon.com/javascript/application/texthatena/wordpro/)
+* [ã¯ã¦ãªè¨˜æ³•ãƒ¯ãƒ¼ãƒ—ãƒ­](http://tech.nitoyon.com/javascript/application/texthatena/wordpro/)
 
 
-»ÈÍÑÊıË¡
+ä½¿ç”¨æ–¹æ³•
 --------
 
     var parser = new TextHatena();
@@ -23,31 +27,31 @@ CPAN ¤Ç¸ø³«¤µ¤ì¤Æ¤¤¤ë [Text::Hatena](http://search.cpan.org/dist/Text-Hatena/) ¤
     // </div>"
 
 
-³«È¯
+é–‹ç™º
 ----
 
-grunt ¤ò»È¤¦¤³¤È¤Ç¸úÎ¨Åª¤Ë³«È¯¤Ç¤­¤ë¡£
+grunt ã‚’ä½¿ã†ã“ã¨ã§åŠ¹ç‡çš„ã«é–‹ç™ºã§ãã‚‹ã€‚
 
-  1. node.js ¤ò¥¤¥ó¥¹¥È¡¼¥ë¡£
-  2. `npm install -g grunt` ¤Ç grunt ¤ò¥¤¥ó¥¹¥È¡¼¥ë¡£
-  3. [PhantomJS](http://phantomjs.org/) ¤ò¥Ñ¥¹¤¬ÄÌ¤Ã¤¿¾ì½ê¤Ë¥¤¥ó¥¹¥È¡¼¥ë¡£
+  1. node.js ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã€‚
+  2. `npm install -g grunt` ã§ grunt ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã€‚
+  3. [PhantomJS](http://phantomjs.org/) ã‚’ãƒ‘ã‚¹ãŒé€šã£ãŸå ´æ‰€ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã€‚
 
-lint ¤È QUnit ¤Ë¤è¤ë¥Æ¥¹¥È¤ò¼Â¹Ô¤¹¤ë¾ì¹ç:
+lint ã¨ QUnit ã«ã‚ˆã‚‹ãƒ†ã‚¹ãƒˆã‚’å®Ÿè¡Œã™ã‚‹å ´åˆ:
 
     $ grunt
 
-¤¿¤À¤·¡¢Windows ¤Î¾ì¹ç¤Ï `grunt.cmd` ¤ò¼Â¹Ô¤¹¤ë¡£
+ãŸã ã—ã€Windows ã®å ´åˆã¯ `grunt.cmd` ã‚’å®Ÿè¡Œã™ã‚‹ã€‚
 
-¥Æ¥¹¥È¤Î¤ß¤ò¼Â¹Ô¤¹¤ë¾ì¹ç:
+ãƒ†ã‚¹ãƒˆã®ã¿ã‚’å®Ÿè¡Œã™ã‚‹å ´åˆ:
 
     $ grunt qunit
 
-¥Õ¥¡¥¤¥ëÊÑ¹¹»ş¤Ë¼«Æ°Åª¤Ë lint ¤È¥Æ¥¹¥È¤ò¼Â¹Ô¤¹¤ë¾ì¹ç:
+ãƒ•ã‚¡ã‚¤ãƒ«å¤‰æ›´æ™‚ã«è‡ªå‹•çš„ã« lint ã¨ãƒ†ã‚¹ãƒˆã‚’å®Ÿè¡Œã™ã‚‹å ´åˆ:
 
     $ grunt default watch
 
 
-¥é¥¤¥»¥ó¥¹
+ãƒ©ã‚¤ã‚»ãƒ³ã‚¹
 ----------
 
 MIT
