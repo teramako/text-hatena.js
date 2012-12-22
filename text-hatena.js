@@ -1,3 +1,5 @@
+var EXPORTED_SYMBOLS = ["TextHatena"];
+
 (function(global) {
 
 var extend = function(destination, source) {
