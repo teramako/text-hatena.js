@@ -52,6 +52,9 @@ test( "footnote test", function() {
 		'<p>foo<span class="footnote"><a href="#f1" title="bar" name="fn1">*1</a></span>ba<span class="footnote"><a href="#f2" title="z" name="fn2">*2</a></span></p>',
 		['<p class="footnote"><a href="#fn1" name="f1">*1</a>: bar</p>',
 		'<p class="footnote"><a href="#fn2" name="f2">*2</a>: z</p>']);
+  text_equal(["foo((bar", "baz))hoge"], ['<p>foo((bar</p>','<p>baz))hoge</p>']);
+  text_equal("foo(((bar)))baz", '<p>foo(((bar)))baz</p>');
+  text_equal("foo)((bar))(baz", '<p>foo((bar))baz</p>');
 });
 
 test( "h3 test", function() {
@@ -60,6 +63,12 @@ test( "h3 test", function() {
 	text_equal("*title1\n*title2", [
 		'<h3><a href="#p1" name="p1"><span class="sanchor">o-</span></a> title1</h3>',
 		'<h3><a href="#p2" name="p2"><span class="sanchor">o-</span></a> title2</h3>']);
+	text_equal("*[cat1][cat2]title[foo]", [
+		'<h3><a href="#p1" name="p1"><span class="sanchor">o-</span></a> ',
+		'[<a class="sectioncategory" href="searchdiary?word=*[cat1]">cat1</a>]',
+		'[<a class="sectioncategory" href="searchdiary?word=*[cat2]">cat2</a>]',
+		'title[foo]</h3>'
+	].join(""));
 });
 
 test( "h4 test", function() {
